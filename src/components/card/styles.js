@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-
+import { colors, margin } from '../../constants/theme';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -8,9 +8,9 @@ export const styles = StyleSheet.create({
         flex: 1,
         flexGrow: 0.4,
         justifyContent: 'center',
-        marginTop: 20,
+        marginTop: margin.medium,
         marginHorizontal: 50,
-        shadowColor: "#000",
+        shadowColor: colors.shadowColor,
         shadowOffset: {
             width: 0,
             height: 1,
