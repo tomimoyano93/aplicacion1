@@ -4,14 +4,6 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    card: {
-        flex: 1,
-        flexGrow: 0.4,
-        justifyContent: 'center',
-        elevation: 2,
-        marginTop: 20,
-        marginHorizontal: 50,
-    },
     cardTitle: {
         fontSize: 20,
         fontWeight: 'bold',

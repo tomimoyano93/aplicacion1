@@ -1,17 +1,18 @@
 import React from 'react';
 import {
-  Text,
-  View,
+  SafeAreaView,
+  Platform,
 } from 'react-native';
 import StartGameScreen from './screens/start-game-screen';
 import { styles } from './styles';
 
+const isIOS = Platform.OS === 'ios';
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StartGameScreen />
-    </View>
+    </SafeAreaView>
   );
 };
 
