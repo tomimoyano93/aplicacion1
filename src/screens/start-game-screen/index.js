@@ -5,13 +5,16 @@ import {
     TextInput,
     Button
 } from 'react-native';
-
+import { colors } from '../../constants/theme';
 import Header from '../../components/header';
 import Card from '../../components/card';
-
+import Input from '../../components/input';
 import { styles } from './styles';
 
 const StartGameScreen = () => {
+    const handleOnChange = (text) => {
+        console.warn(text);
+    }
     return (
         <View style={styles.container}> 
             <Header title='Adivina el número' />
@@ -19,11 +22,16 @@ const StartGameScreen = () => {
                 <Text style={styles.cardTitle}>Empezar Juego</Text>
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Elija un número</Text>
-                    <TextInput 
-                        style={styles.input} 
-                        placeholder='11' 
-                        placeholderTextColor='#52528C'
+                    <Input 
+                        blurOnSubmit
+                        autoCapitalize='none'
+                        autoCorrect={false}
+                        keyboardType='number-pad'
+                        placeholder='Ej: 11' 
+                        placeholderTextColor={colors.placeholderColor}
                         maxLength={2}
+                        handleOnChange={(value) => handleOnChange(value)}
+                        returnKeyType='done'
                     />
                 </View>
                 <View style={styles.buttonsContainer}>

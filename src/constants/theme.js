@@ -7,7 +7,8 @@ export const colors = {
     secondaryText: '#fff',
     primaryBackground: '#fff',
     secondaryBackground: '#52528C',
-    shadowColor: '#000'
+    shadowColor: '#000',
+    placeholderColor: '#B0A3D4'
 }
 
 export const fontSize = {

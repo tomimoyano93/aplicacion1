@@ -14,16 +14,8 @@ export const styles = StyleSheet.create({
     },
     inputContainer: {
         flex: 1,
-        flexGrow: 0.6,
+        flexGrow: 0.5,
         marginHorizontal: margin.medium,
-    },
-    input: {
-        borderBottomColor: colors.primary,
-        borderBottomWidth: 1,
-        color: colors.primary,
-        marginBottom: margin.small,
-        fontSize: 30,
-        alignSelf: 'center',
     },
     label: {
         fontSize: fontSize.text,
