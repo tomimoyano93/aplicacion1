@@ -9,8 +9,8 @@ export const styles = StyleSheet.create({
         backgroundColor: '#52528C',
     },
     title: {
+        fontFamily: 'Montserrat-Bold',
         fontSize: 20,
-        fontWeight: 'bold',
         textAlign: 'center',
         margin: 10,
         color: '#fff',

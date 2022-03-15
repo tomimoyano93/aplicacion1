@@ -4,7 +4,7 @@ import { styles } from './styles'
 
 const Card = ({ children, style }) => {
     return (
-        <View style={{ ...style , ...styles.card, }}>
+        <View style={{ ...styles.card, ...style }}>
             {children}
         </View>
     )

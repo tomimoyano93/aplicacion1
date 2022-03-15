@@ -14,7 +14,8 @@ export const colors = {
 export const fontSize = {
     title: 20,
     text: 16,
-    button: 18
+    button: 18,
+    large: 35
 }
 
 export const padding = {

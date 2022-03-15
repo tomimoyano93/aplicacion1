@@ -31,5 +31,18 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         marginHorizontal: margin.medium,
+    },
+    containerConfirmed: {
+        flex: 1,
+        flexGrow: 0.25,
+        justifyContent: 'center',
+        marginVertical: margin.medium,
+    },
+    confirmedText: {
+        fontSize: fontSize.large,
+        fontWeight: 'bold',
+        color: colors.primary,
+        justifyContent: 'center',
+        alignSelf: 'center',
     }
 });
