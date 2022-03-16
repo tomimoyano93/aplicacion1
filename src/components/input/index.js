@@ -12,7 +12,7 @@ const Input = ({ handleOnChange, style, ...props}) => {
         <View style={styles.container}>
             <TextInput 
                 {...props}
-                style={[styles.input, {style}]}
+                style={[style, styles.input]}
                 onChangeText={handleOnChange}
             />
         </View>
