@@ -7,6 +7,7 @@ import {
     KeyboardAvoidingView,
     Keyboard,
     Platform,
+    ScrollView,
 } from 'react-native';
 import { colors } from '../../constants/theme';
 import Header from '../../components/header';
@@ -46,44 +47,48 @@ const StartGameScreen = ({ onStartGame }) => {
         <Card style={styles.containerConfirmed}>
             <Text style={styles.cardTitle}>Tu Selección</Text>
             <Text style={styles.confirmedText}>{selectedNumber}</Text>
-            <Button title='Empezar Juego' onPress={() => onStartGame(selectedNumber)} color='#52528C'/>
+            <View style={styles.buttonsContainer}>
+                <Button title='Empezar Juego' onPress={() => onStartGame(selectedNumber)} color='#52528C'/>
+            </View>
         </Card>
     ) : null;
 
     return (
-        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-            <KeyboardAvoidingView 
-                behavior={isIOS ? '' : 'height'}
-                style={styles.container}
-            >
-                <View style={styles.container}> 
-                    <Header title='Adivina el número' />
-                    <Card>
-                        <Text style={styles.cardTitle}>Empezar Juego</Text>
-                        <View style={styles.inputContainer}>
-                            <Text style={styles.label}>Elija un número</Text>
-                            <Input 
-                                blurOnSubmit
-                                autoCapitalize='none'
-                                autoCorrect={false}
-                                keyboardType='number-pad'
-                                placeholder='Ej: 11' 
-                                placeholderTextColor={colors.placeholderColor}
-                                maxLength={2}
-                                handleOnChange={(value) => handleOnChange(value)}
-                                returnKeyType='done'
-                                value={inputValue}
-                            />
-                        </View>
-                        <View style={styles.buttonsContainer}>
-                            <Button title='Limpiar' onPress={() => handleResetInput()} color='#52528C'/>
-                            <Button title='Confirmar' onPress={() => handleConfirmInput()} color='#52528C'/>
-                        </View>
-                    </Card>
-                    {confirmedOutput}
-                </View>
-            </KeyboardAvoidingView>
-        </TouchableWithoutFeedback>
+        <ScrollView style={styles.container}>
+            <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+                <KeyboardAvoidingView 
+                    behavior={isIOS ? '' : 'height'}
+                    style={styles.container}
+                >   
+                    <View style={styles.container}> 
+                        <Header title='Adivina el número' />
+                        <Card>
+                            <Text style={styles.cardTitle}>Empezar Juego</Text>
+                            <View style={styles.inputContainer}>
+                                <Text style={styles.label}>Elija un número</Text>
+                                <Input 
+                                    blurOnSubmit
+                                    autoCapitalize='none'
+                                    autoCorrect={false}
+                                    keyboardType='number-pad'
+                                    placeholder='Ej: 11' 
+                                    placeholderTextColor={colors.placeholderColor}
+                                    maxLength={2}
+                                    handleOnChange={(value) => handleOnChange(value)}
+                                    returnKeyType='done'
+                                    value={inputValue}
+                                />
+                            </View>
+                            <View style={styles.buttonsContainer}>
+                                <Button title='Limpiar' onPress={() => handleResetInput()} color='#52528C'/>
+                                <Button title='Confirmar' onPress={() => handleConfirmInput()} color='#52528C'/>
+                            </View>
+                        </Card>
+                        {confirmedOutput}
+                    </View>
+                </KeyboardAvoidingView>
+            </TouchableWithoutFeedback>
+        </ScrollView>
     )
 }
 

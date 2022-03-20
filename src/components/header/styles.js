@@ -1,9 +1,9 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
+const { width, height } = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        flexGrow: 0.2,
+        height: height * 0.15,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#52528C',
